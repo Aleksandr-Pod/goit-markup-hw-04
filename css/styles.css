@@ -58,6 +58,7 @@ h6 {
 }
 .header-page .container {
   display: flex;
+  flex-basis: auto;
   align-items: center;
   padding: 0 15px;
 }
@@ -88,7 +89,7 @@ h6 {
 }
 
 .header-menu-item .link {
-  display: block;
+  /* display: block; */
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -97,22 +98,34 @@ h6 {
   margin-left: auto;
 }
 .header-addr .link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
 }
 .item + .item {
   margin-left: 50px;
-} /* отступ в адрессе от последующих элементов - а он один*/
+}
 
 .blacklink {
   color: var(--maintext-color);
+}
+.icon-envelope,
+.icon-smartphone {
+  fill: #757575;
+  margin-right: 10px;
+}
+
+.link-envelope:hover .icon-envelope,
+.link-smartphone:hover .icon-smartphone {
+  fill: var(--active-color);
 }
 
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: #2f303a;
+  background-image: url(../images/backgroung-Img.png);
 }
 
 .hero-header {
@@ -208,9 +221,7 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.team .container {
-  /* background-color: #f5f4fa; */
-}
+
 .team-header {
   text-align: center;
   margin-bottom: 50px;

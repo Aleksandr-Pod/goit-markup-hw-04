@@ -121,10 +121,10 @@ h6 {
 }
 
 .hero {
-  /* height: 600px; */
   max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin: auto;
   background-color: #c4c4c4;
   background-image: linear-gradient(to right, #2f303a40, #2f303a40),
     url(../images/backgroung-Img.png);
@@ -355,6 +355,7 @@ img {
 /* ---------------- FOOTER ------------ */
 .footer {
   max-width: 1600px;
+  margin: auto;
   background-color: rgba(47, 48, 58, 1);
   padding-top: 60px;
   padding-bottom: 60px;

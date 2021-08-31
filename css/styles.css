@@ -111,16 +111,19 @@ h6 {
 }
 .icon-envelope,
 .icon-smartphone {
-  /* background-image: contain; */
   fill: #757575;
   margin-right: 10px;
 }
 
-.link-envelope:hover,
+.link-envelope:hover .icon-envelope {
+  fill: var(--active-color);
+}
 .link-envelope:focus .icon-envelope {
   fill: var(--active-color);
 }
-.link-smartphone:hover,
+.link-smartphone:hover .icon-smartphone {
+  fill: var(--active-color);
+}
 .link-smartphone:focus .icon-smartphone {
   fill: var(--active-color);
 }

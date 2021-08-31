@@ -88,7 +88,6 @@ h6 {
 }
 
 .header-menu-item .link {
-  /* display: block; */
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -111,12 +110,17 @@ h6 {
 }
 .icon-envelope,
 .icon-smartphone {
+  /* background-image: contain; */
   fill: #757575;
   margin-right: 10px;
 }
 
-.link-envelope:hover .icon-envelope,
-.link-smartphone:hover .icon-smartphone {
+.link-envelope:hover,
+.link-envelope:focus .icon-envelope {
+  fill: var(--active-color);
+}
+.link-smartphone:hover,
+.link-smartphone:focus .icon-smartphone {
   fill: var(--active-color);
 }
 
@@ -145,7 +149,7 @@ h6 {
 }
 .hero-button {
   display: block;
-  margin: 30px auto 0 auto;
+  margin: 30px auto 0;
   padding: 10px 32px;
 
   border-radius: 4px;
@@ -232,6 +236,7 @@ img {
 .team {
   padding-top: 94px;
   padding-bottom: 94px;
+  background-color: #f5f4fa;
 }
 
 .team-header {
@@ -258,6 +263,7 @@ img {
   border-radius: 0 0 4px 4px;
 }
 .team-data {
+  padding: 30px 32px;
   text-align: center;
 }
 .team-name {
@@ -271,36 +277,41 @@ img {
   color: var(--maintext-color);
 }
 .team-prof {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
 .social-icons {
   display: flex;
-  padding: 16px 32px 30px 32px;
+  justify-content: center;
 }
 .social-icon-block {
   height: 44px;
   width: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .social-icon-block:not(:last-child) {
   margin-right: 10px;
 }
-
+.social-icon-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .soc-icon {
   height: 20px;
   width: 20px;
-  fill: #757575;
+  fill: #afb1b8;
 }
-.social-icon-block:hover {
+.social-icon-link:hover,
+.social-icon-link:focus {
   background-color: var(--active-color);
   border-radius: 50%;
-  color: var(--activebutton-textcolor);
 }
-.social-icon-block:hover .soc-icon {
+.social-icon-link:hover .soc-icon,
+.social-icon-link:focus .soc-icon {
   fill: var(--activebutton-textcolor);
 }
 .clients {
@@ -338,7 +349,6 @@ img {
   justify-content: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  /* border-color: #afb1b8; */
 }
 .client-icon {
   fill: #afb1b8;
@@ -355,7 +365,6 @@ img {
 /* ---------------- FOOTER ------------ */
 .footer {
   max-width: 1600px;
-  margin: auto;
   background-color: rgba(47, 48, 58, 1);
   padding-top: 60px;
   padding-bottom: 60px;
@@ -421,13 +430,13 @@ img {
   height: 20px;
   fill: var(--activebutton-textcolor);
 }
-.f-social-icon-block:hover,
-.f-social-icon-block:focus {
+.soc-link:hover,
+.soc-link:focus {
   background-color: var(--active-color);
   border-radius: 50%;
 }
 
-.f-social-icon-block .soc-link {
+.soc-link {
   width: 100%;
   height: 100%;
   display: flex;
